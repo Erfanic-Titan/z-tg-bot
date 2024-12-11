@@ -7,11 +7,7 @@ import logging
 from languages import languages
 import os
 import base64
-<<<<<<< HEAD
-from buttons2 import create_keyboard
-=======
 from ai_buttons import create_ai_keyboard
->>>>>>> bd6d513 (Initial commit)
 import asyncio
 
 # تنظیم لاگینگ
@@ -194,17 +190,9 @@ def create_chat_keyboard(language_code: str, chat_list: list) -> InlineKeyboardM
     return InlineKeyboardMarkup(keyboard)
 
 async def show_chat_menu(client: Client, chat_id: int, language_code: str):
-<<<<<<< HEAD
-    # نمایش منوی چت‌ها
-    chat_list = await load_chat_history(chat_id)
-    keyboard = create_keyboard(language_code, 'artificial-intelligence')  # تغییر این خط
-    
-    # اضافه کردن متن خوش‌آمدگویی به پیام اصلی
-=======
     chat_list = await get_user_chats(chat_id)
     keyboard = create_ai_keyboard(language_code, chat_list)  # از تابع جدید استفاده می‌کنیم
     
->>>>>>> bd6d513 (Initial commit)
     text = languages[language_code]['ai_welcome'] + "\n\n" + languages[language_code]['select_chat']
     
     await client.send_message(
