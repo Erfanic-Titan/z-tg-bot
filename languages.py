@@ -62,9 +62,12 @@ And secondly, we are happy for you to join the Zephus Union to use our tools⚙
   'movie-series-downloader': '🎬Movie and Series Downloader',
   'book-article-downloader': '📚Book and Article Downloader',
   # متن‌های مربوط به هوش مصنوعی
-        'artificial-intelligence': '🤖Artificial Intelligence',
+        'new_chat': 'New Chat 💬',
+        'clear_history': 'Clear History 🗑',
+        'chat_saved': 'Chat Saved',
+        'rename_chat': 'Rename Chat',
+        'chat_deleted': 'Chat Deleted',
         'ai_welcome': '''Welcome to Ziphus AI Assistant powered by Gemini 1.5 Flash!
-
 I can help you with:
 - Text conversations
 - Image analysis
@@ -72,32 +75,10 @@ I can help you with:
 - Voice recognition
 - Video analysis
 
-Just send me your message or media!''',
-        'ai_processing': 'Processing your request...',
+Just send me your message!''',
+        'ai_thinking': 'Thinking... 🤔',
         'ai_error': 'Sorry, an error occurred. Please try again.',
-        'new_chat': '📝 New Chat',
         'select_chat': 'Please select a chat or start a new one:',
-        'chat_saved': 'Chat saved successfully!',
-        'chat_loaded': 'Chat loaded successfully!',
-        'chat_deleted': 'Chat deleted successfully!',
-        'rename_chat': 'Please enter a new name for the chat:',
-        'chat_renamed': 'Chat renamed successfully!',
-        'ai_help': '''🤖 AI Assistant Help:
-
-1. Text: Just type your message
-2. Image: Send a photo with caption
-3. Voice: Send a voice message
-4. Video: Send a video with caption
-5. File: Send any document
-
-Commands:
-/new - Start new chat
-/save - Save current chat
-/list - Show chat history
-/rename - Rename current chat
-/delete - Delete current chat
-/help - Show this help''',
-
 
 },
 'fa' : {
@@ -323,32 +304,24 @@ Yourname@gmail.com
 کافیست پیام یا رسانه خود را برای من ارسال کنید!''',
         'ai_processing': 'در حال پردازش درخواست شما...',
         'ai_error': 'متأسفانه خطایی رخ داد. لطفاً دوباره تلاش کنید.',
-        'new_chat': '📝 چت جدید',
+       'new_chat': 'چت جدید 💬',
+        'clear_history': 'پاکسازی تاریخچه 🗑',
+        'chat_saved': 'چت ذخیره شد',
+        'rename_chat': 'تغییر نام چت',
+        'chat_deleted': 'چت حذف شد',
+        'ai_welcome': '''به دستیار هوش مصنوعی زیفوس با قدرت Gemini 1.5 Flash خوش آمدید!
+
+من می‌توانم در موارد زیر به شما کمک کنم:
+- مکالمات متنی
+- تحلیل تصاویر
+- پردازش فایل‌ها
+- تشخیص گفتار
+- تحلیل ویدیو
+
+کافیست پیام خود را ارسال کنید!''',
+        'ai_thinking': 'در حال فکر کردن... 🤔',
+        'ai_error': 'متأسفانه خطایی رخ داد. لطفاً دوباره تلاش کنید.',
         'select_chat': 'لطفاً یک چت را انتخاب کنید یا چت جدیدی را شروع کنید:',
-        'chat_saved': 'چت با موفقیت ذخیره شد!',
-        'chat_loaded': 'چت با موفقیت بارگذاری شد!',
-        'chat_deleted': 'چت با موفقیت حذف شد!',
-        'rename_chat': 'لطفاً نام جدیدی برای چت وارد کنید:',
-        'chat_renamed': 'نام چت با موفقیت تغییر کرد!',
-        'ai_help': '''🤖 راهنمای دستیار هوش مصنوعی:
-
-'ai_thinking': 'در حال فکر کردن... 🤔',
-'ai_processing_audio': 'در حال پردازش پیام صوتی...',
-'ai_processing_video': 'در حال پردازش ویدیو...',
-'ai_processing_file': 'در حال پردازش فایل...',
-
-1. متن: کافیست پیام خود را تایپ کنید
-2. تصویر: عکس را با توضیحات ارسال کنید
-3. صدا: پیام صوتی ارسال کنید
-4. ویدیو: ویدیو را با توضیحات ارسال کنید
-5. فایل: هر نوع فایلی را ارسال کنید
-
-دستورات:
-/new - شروع چت جدید
-/save - ذخیره چت فعلی
-/list - نمایش تاریخچه چت‌ها
-/rename - تغییر نام چت فعلی
-/delete - حذف چت فعلی
-/help - نمایش این راهنما''',
     }
 }
+
