@@ -39,11 +39,12 @@ def create_keyboard(language_code, keyboards_type):
 
     # دکمه‌های جدید برای بخش هوش مصنوعی
     elif keyboards_type == 'artificial-intelligence':
-        keyboard = InlineKeyboardMarkup([
-            [InlineKeyboardButton(languages[language_code]['new_chat'], callback_data="ai_new_chat")],
-            [InlineKeyboardButton("🗑 " + languages[language_code]['clear-database'], callback_data="ai_clear_history")],
+        keyboard = [
+            [InlineKeyboardButton(languages[language_code]['new_chat'], callback_data='ai_new_chat')],
+            [InlineKeyboardButton("🔄 " + languages[language_code]['clear_history'], callback_data='ai_clear_history')],
             [InlineKeyboardButton(languages[language_code]['back'], callback_data='back-menu-for-else')]
-        ])
+        ]
+        return InlineKeyboardMarkup(keyboard)
 
     # دکمه‌های منوی چت هوش مصنوعی
     elif keyboards_type == 'ai_chat_menu':
