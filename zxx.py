@@ -215,9 +215,11 @@ async def handle_callback_query_for_select_language(client, callback_query):
 
     if data == 'artificial-intelligence':
         keyboards = create_keyboard(language_code, 'artificial-intelligence')
-        
-        await callback_query.message.delete()
-        await show_chat_menu(client, chat_id_user_click_callback, language_code)
+        await callback_query.edit_message_text(
+            languages[language_code]['ai_welcome'],
+            reply_markup=keyboards
+        )
+        user_type_status[chat_id_user_click_callback] = "ai_chat"
 
 
     # در تابع handle_callback_query_for_select_language اضافه کنید:
