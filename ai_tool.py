@@ -191,9 +191,9 @@ def create_chat_keyboard(language_code: str, chat_list: list) -> InlineKeyboardM
 
 async def show_chat_menu(client: Client, chat_id: int, language_code: str):
     chat_list = await get_user_chats(chat_id)
-    keyboard = create_ai_keyboard(language_code, chat_list)  # از تابع جدید استفاده می‌کنیم
+    keyboard = create_keyboard(language_code, 'artificial-intelligence') 
     
-    text = languages[language_code]['ai_welcome'] + "\n\n" + languages[language_code]['select_chat']
+    text = languages[language_code]['ai_welcome']
     
     await client.send_message(
         chat_id,
