@@ -1,7 +1,6 @@
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, ReplyKeyboardMarkup, KeyboardButton, ReplyKeyboardRemove
 from languages import *
 from db4 import check_for_existence_in_the_database
-from ai_tool import chat_list
 
 
 keyboard_select_orders_or_tools = InlineKeyboardMarkup([
@@ -54,38 +53,6 @@ def create_keyboard(language_code, keyboards_type):
              InlineKeyboardButton("🗑️ " + languages[language_code]['chat_deleted'], callback_data='ai_delete_chat')],
             [InlineKeyboardButton(languages[language_code]['back'], callback_data='back-menu-for-else')]
         ])
-
-    elif keyboards_type == 'ai_chat_menu':
-        keyboard = []
-        
-        # دکمه چت جدید
-        keyboard.append([InlineKeyboardButton(
-            languages[language_code]['new_chat'],
-            callback_data="ai_new_chat"
-        )])
-        
-        # نمایش چت‌های موجود
-        if chat_list:
-            for chat in chat_list:
-                keyboard.append([
-                    InlineKeyboardButton(
-                        f"💬 {chat[1]}",  # نام چت
-                        callback_data=f"ai_select_chat_{chat[0]}"
-                    ),
-                    InlineKeyboardButton(
-                        "✏️",  # دکمه تغییر نام
-                        callback_data=f"ai_rename_chat_{chat[0]}"
-                    ),
-                    InlineKeyboardButton(
-                        "🗑️",  # دکمه حذف
-                        callback_data=f"ai_delete_chat_{chat[0]}"
-                    )
-                ])
-        
-        keyboard.append([InlineKeyboardButton(
-            languages[language_code]['back'],
-            callback_data="back-menu-for-else"
-        )])
         
         return InlineKeyboardMarkup(keyboard)
 
